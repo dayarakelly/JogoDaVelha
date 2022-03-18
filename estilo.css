@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+
+*{
+	margin:0;
+	padding:0;
+}
+h1{
+	font-size:22px;
+	color:#EC9A40;
+	font-weight:bolder;
+	width:411px;
+	margin:auto;
+	font-family: 'Gothic A1', sans-serif;
+}
+body{
+	background:#FDFFFE;
+	background-size: cover;
+	font-family:Century Gothic; 
+	font-family: 'Gothic A1', sans-serif;		
+}
+header{
+	text-align:center;
+	font-weight:bolder;
+	margin:25px;
+	height:40px;
+	width:500px;
+	margin:auto;
+	margin-top:20px;
+	margin-bottom:35px;	
+}
+ section{
+	width:378px;
+	height:379px;
+	margin:auto;
+	margin-top:20px;
+	display:flex;
+	justify-content:center;
+	flex-wrap:wrap;
+}
+.tabuleiro{
+	width:100%;
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	flex-wrap:wrap;	
+} 
+.casa{	
+	width:122px;
+	height:120px;
+	border:solid 2px #41AF7B;
+	background:radial-gradient(#96FFCD, #60ECA9);
+	text-align:center;
+	position: relative;
+	border-radius:10px; 
+}
+.casa:hover{
+	box-shadow:inset 3px 3px 25px #F2FDF7;
+}
+.casa{
+	/*Centraliza o texto na vertical*/
+	line-height:126px; 
+	font-family: 'Nunito', sans-serif;
+	text-transform:uppercase;
+	font-size:85px;
+	color:#032514;
+	font-weight:bolder;
+}
+.jogador{
+	text-align:center;
+	display:inline-block;
+	padding:6px;
+	background:#6AEEAF;
+	margin:0px 6px 0px 6px;
+	border-radius:10px;
+	font-size:16px;
+	width:150px;
+}
+.jogador input{
+	width:79px;
+	height:20px;
+	outline:none;
+}
+.iniciar{
+	background:#AA83CE;
+	width:123px;
+	margin:auto;
+	display:block;
+	border:solid 1px #B786E4;
+	border-radius:10px;
+	padding:10px;
+	margin-bottom:12px;
+	margin-top:12px;
+	font-family: 'Gothic A1', sans-serif;
+	font-size:17px;
+	color:white;
+	font-weight:bolder;	
+}
+.iniciar:hover{
+	box-shadow:inset 2px 2px 10px #D3B0F1;
+	cursor:pointer;
+}
+.reiniciar:hover{
+	cursor:pointer;
+}
+.reiniciar{
+	background:#B786E4;
+	width:123px;
+	margin:auto;
+	display:block;
+	border:none;
+	border-radius:4px;
+	padding:4px 2px 4px 2px;
+	margin-top:13px;
+	font-family: 'Gothic A1', sans-serif;
+	font-size:12px;
+	color:white;
+	font-weight:bold;
+}
+.desativaReiniciar{
+	display:none;
+}
+.desativa{
+	background:#D4D4D4;
+	border:solid 1px #D4D4D4;
+}
+.desativa:hover{
+	cursor:default;
+}
+span{
+	color:#B786E4;
+	font-weight:bolder;
+	font-size:22px;
+}
+
+.bottom{
+	text-align:center;
+	height:40px;
+	width:150px;
+	margin:auto;
+	margin-top:110px;
+	color:purple;
+	font-size:13px;
+}
