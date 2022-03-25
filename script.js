@@ -36,7 +36,7 @@ btIniciar.addEventListener('click',  function(){
 	document.addEventListener('click', function(e){
 		teste(e)
 		if(jogada >=9){
-			vez.innerHTML=`Não houve vencedor! <br> \u{1F625}`
+			vez.innerHTML=`Sem ganhador! <br> \u{1F625}`
 			fimJogo()
 			
 		}else{			
