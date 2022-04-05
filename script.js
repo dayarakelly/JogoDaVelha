@@ -17,11 +17,10 @@ btReiniciar.addEventListener('click',function(){
 	 window.location.reload()	
 })
 
-
 btIniciar.addEventListener('click',  function(){
 	btReiniciar.classList.remove('desativaReiniciar')
-
 	jogada=0
+	
 	//Limpa todas as casas do tabuleiro
 		for(posLista = 0;posLista<=8;posLista++){	
 			lista[posLista].innerHTML=''
@@ -35,10 +34,18 @@ btIniciar.addEventListener('click',  function(){
 	
 	document.addEventListener('click', function(e){
 		teste(e)
-		if(jogada >=9){
-			vez.innerHTML=`Sem ganhador! <br> \u{1F625}`
-			fimJogo()
-			
+		//verifica a ultima jogada
+		if((jogada >=9) && !((p1.value=='X'&& p2.value=='X' && p3.value=='X')||
+				(p4.value=='X'&& p5.value=='X' && p6.value=='X')||
+				(p7.value=='X'&& p8.value=='X' && p9.value=='X')||
+				(p1.value=='X'&& p4.value=='X' && p7.value=='X')||
+				(p2.value=='X'&& p5.value=='X' && p8.value=='X')||
+				(p3.value=='X'&& p6.value=='X' && p9.value=='X')||		
+				(p1.value=='X'&& p5.value=='X' && p9.value=='X')||
+				(p3.value=='X'&& p5.value=='X' && p7.value=='X'))){
+				vez.innerHTML=`Sem vencedor! <br> \u{1F625}`
+				fimJogo()
+		//verifica se X foi o vencedor	
 		}else{			
 			if((p1.value=='X'&& p2.value=='X' && p3.value=='X')||
 				(p4.value=='X'&& p5.value=='X' && p6.value=='X')||
@@ -48,11 +55,9 @@ btIniciar.addEventListener('click',  function(){
 				(p3.value=='X'&& p6.value=='X' && p9.value=='X')||		
 				(p1.value=='X'&& p5.value=='X' && p9.value=='X')||
 				(p3.value=='X'&& p5.value=='X' && p7.value=='X')){ 
-						
-				//🏆
 				vez.innerHTML=`\u{1F3C6}&nbsp &nbsp Ganhador &nbsp &nbsp \u{1F3C6} <br> X `	
 				fimJogo()
-		 
+			//verifica se O foi o vencedor
 			}else if ((p1.value=='O'&& p2.value=='O' && p3.value=='O')||
 				(p4.value=='O'&& p5.value=='O' && p6.value=='O')||
 				(p7.value=='O'&& p8.value=='O' && p9.value=='O')||		
@@ -65,16 +70,14 @@ btIniciar.addEventListener('click',  function(){
 				vez.innerHTML=`\u{1F3C6}&nbsp &nbsp Ganhador &nbsp &nbsp \u{1F3C6} <br> O `
 				fimJogo()		
 			}
-				
-		}	
-				
+		}		
 	})
 	
 function fimJogo(){
 		btIniciar.classList.remove('desativa')
 		btIniciar.disabled = false;
 		btReiniciar.classList.add('desativaReiniciar')
-		jogada=0
+		//jogada=0
 }
 
 function teste(e){
@@ -98,13 +101,10 @@ function teste(e){
 				elementoId.value='O'							
 				vez.innerHTML=`X é sua vez!`
 				}
-						jogada++
+						++jogada
 								
-				}	 			
-					
-			} 
-	
-		
+				}	
+			}
 		}
 	}	
 }	
